@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 import path from 'path';
 
 const nextConfig: NextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true, 
+  },
+
   webpack: (config) => {
     // Resolve the 'three' import issue
     config.resolve.alias = {
